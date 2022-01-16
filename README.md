@@ -25,4 +25,4 @@ Use `Ctrl+C` in the terminal to stop the local server.
 
 ## Backend server##
 
-Dans le dossier backend, exécutez npm install, et node server ou nodemon start
+In the backend folder, run npm install, and node server or nodemon start
