@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "d7fa41a2-88c5-4add-9e7d-b78b8bc91f5f",
+		"name": "Sauces",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Créer un nouvel utilisateur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"aurelo+5@gmail.com\",\n    \"password\":\"password_secret1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/signup/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"aurelo+5@gmail.com\",\n    \"password\":\"password_secret1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Créer une nouvelle sauce",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n            \"name\": \"maSauce2\",\n            \"manufacturer\": \"toujours moi\",\n            \"description\": \"très très piquante\",\n            \"imageUrl\": \"./images/image_sauce.png\" ,\n            \"mainPepper\": \"piment\",\n            \"userId\": \"_61cc2c176f40231b0f686941\",\n            \"heat\":  \"9\" ,\n            \"likes\": \"2\" ,\n            \"dislikes\": \"2\" ,\n            \"usersLiked\":  [\"61cc2a856f40231b0f686937\"],\n            \"usersDisliked\": [\"61cc32ec8b33dd6cbc0636f9\"] \n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sauces/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sauces",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "récupérer toutes les sauces",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n            \"name\": \"maSauce2\",\n            \"manufacturer\": \"toujours moi\",\n            \"description\": \"très très piquante\",\n            \"imageUrl\": \"./images/image_sauce.png\" ,\n            \"mainPepper\": \"piment\",\n            \"userId\": \"_61cc2c176f40231b0f686941\",\n            \"heat\":  \"9\" ,\n            \"likes\": \"2\" ,\n            \"dislikes\": \"2\" ,\n            \"usersLiked\":  [\"61cc2a856f40231b0f686937\"],\n            \"usersDisliked\": [\"61cc32ec8b33dd6cbc0636f9\"] \n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sauces/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sauces",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Récupérer une sauce avec son Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "      {\n            \"name\": \"maNouvelleSauce\",\n            \"manufacturer\": \"moi-même\",\n            \"description\": \"Sauce très piquante\",\n            \"imageUrl\": \"./images/image_sauce.png\",\n            \"mainPepper\": \"piments\",\n            \"userId\": \"_61cc2a856f40231b0f686937\",\n            \"heat\": 3,\n            \"likes\": 0,\n            \"dislikes\": 0,\n            \"usersLiked\": [],\n            \"usersDisliked\": []\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/Sauces/61d30a8b2111b8d263ce5847/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Sauces",
+						"61d30a8b2111b8d263ce5847",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mettre à jour une sauce",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\n            \"name\": \"maSauce2\",\n            \"manufacturer\": \"toujours moi\",\n            \"description\": \"très très piquante\",\n            \"imageUrl\": \"./images/image_sauce.png\" ,\n            \"mainPepper\": \"piment\",\n            \"userId\": \"_61cc2c176f40231b0f686941\",\n            \"heat\":  \"9\" ,\n            \"likes\": \"5\" ,\n            \"dislikes\": \"5\" ,\n            \"usersLiked\":  [\"61cc2a856f40231b0f686937\"],\n            \"usersDisliked\": [\"61cc32ec8b33dd6cbc0636f9\"] \n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sauces/61d30a8b2111b8d263ce5847/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sauces",
+						"61d30a8b2111b8d263ce5847",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Supprimer une sauce",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/sauces/61d2e7c8ba4aedec4ca00796/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sauces",
+						"61d2e7c8ba4aedec4ca00796",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mettre à jour les like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\":\"61d30bc92111b8d263ce584b\",\n    \"like\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sauces/61d30a8b2111b8d263ce5847/like/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sauces",
+						"61d30a8b2111b8d263ce5847",
+						"like",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWQ1ODQzYmVmZDhjMzY2ZmViZWFjY2IiLCJpYXQiOjE2NDEzODI5OTksImV4cCI6MTY0MTQ2OTM5OX0.snbzI_fzfKQHeWN-o1upzxE4bKtAYCff13OFLbRzKiw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
